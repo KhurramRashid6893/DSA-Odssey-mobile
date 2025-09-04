@@ -230,8 +230,14 @@ body {
 /* --- Mobile Responsiveness --- */
 @media (max-width: 900px) {
     .solution-container {
-        grid-template-columns: 1fr;
-        overflow-y: auto;
+        grid-template-columns: 1fr; /* Stack cards vertically */
+        overflow-y: auto; /* Allow the container itself to scroll */
+        padding-right: 10px; /* Add some padding to avoid scrollbar overlap */
+    }
+
+    .solution-card {
+        overflow-y: visible; /* Prevent double scrollbars */
+        height: auto; /* Allow cards to grow with their content */
     }
 }
 

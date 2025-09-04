@@ -86,6 +86,12 @@ function onPointerClick(event) {
         infoBox.innerHTML = `<h3>Day ${dayData.day}</h3><ul>${dayData.problems.map(p => `<li><div class="problem-details"><div class="planet-title">Planet Name:</div><a href="${p.link}" class="gfg-link" target="_blank">${p.name} ${p.emojis.join(' ')}</a><a href="${p.twitterPostLink}" class="twitter-link" target="_blank">View Post on 𝕏</a></div><span class="difficulty ${p.difficulty.toLowerCase()}">${p.difficulty}</span></li>`).join('')}</ul> <p class="notes">${dayData.problems[0].notes || ''}</p>`;
         sidebarMainContent.style.display = 'none';
         sidebarDetailsView.style.display = 'block';
+
+        // **NEW:** Automatically open the sidebar if it's collapsed
+        if (sidebar.classList.contains('collapsed')) {
+            sidebar.classList.remove('collapsed');
+            sidebarToggleBtn.classList.add('active');
+        }
     }
 }
 window.addEventListener('click', onPointerClick);
@@ -176,7 +182,11 @@ togglePathBtn.addEventListener('click', () => {
     journeyPath.visible = !journeyPath.visible;
     togglePathBtn.innerText = journeyPath.visible ? 'Hide Journey Path' : 'Show Journey Path';
 });
-sidebarToggleBtn.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+// **UPDATED:** The button now toggles its own 'active' state
+sidebarToggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+    sidebarToggleBtn.classList.toggle('active');
+});
 backToMainBtn.addEventListener('click', () => {
     sidebarDetailsView.style.display = 'none';
     sidebarMainContent.style.display = 'block';
