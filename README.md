@@ -1,49 +1,44 @@
 ````markdown
 # 160-Day DSA Odyssey ✨
 
-Welcome to the 160-Day DSA Odyssey, an interactive and visually stunning web application that chronicles a 160-day journey through the world of Data Structures and Algorithms. Explore problems as planets in a beautiful 3D galaxy, view detailed notes, and get AI-powered code solutions on demand.
+Welcome to the **160-Day DSA Odyssey**, an interactive and visually stunning web application that chronicles a 160-day journey through the world of **Data Structures and Algorithms**.  
 
-
+Explore problems as planets in a beautiful **3D galaxy**, view detailed notes, and get **AI-powered code solutions** on demand.
 
 ---
 
 ## 🚀 Key Features
 
-* **Interactive 3D Visualization**: Journey through a spiral galaxy where each star represents a solved DSA problem. The visualization is built with **Three.js**.
-* **AI-Powered Code Solutions**: Integrated with the **Google Gemini API** to generate code solutions for any problem in any programming language, complete with detailed explanations.
-* **Detailed Problem Information**: Click on any "planet" to view comprehensive details, including problem difficulty, topics covered, personal notes, and links to the original problem and social media posts.
-* **Search and Filter**: Easily find specific problems by searching for their name or filtering by topic.
-* **Responsive Design**: A sleek, modern interface that works seamlessly on both desktop and mobile devices.
-* **Dynamic Content**: The entire journey is rendered dynamically from a `journeyData.json` file, making it easy to update and expand.
+- **Interactive 3D Visualization**: Journey through a spiral galaxy where each star represents a solved DSA problem. Built with **Three.js**.  
+- **AI-Powered Code Solutions**: Integrated with the **Google Gemini API** to generate solutions in any programming language, complete with explanations.  
+- **Detailed Problem Information**: Click any "planet" to view details, including difficulty, topics, personal notes, and links.  
+- **Search & Filter**: Quickly find problems by name or topic.  
+- **Responsive Design**: Sleek interface that works seamlessly on **desktop and mobile**.  
+- **Dynamic Content**: Problems are rendered from `journeyData.json`, making updates simple.  
 
 ---
 
 ## 🛠️ Tech Stack
 
-This project is built with a combination of modern web technologies:
-
-* **Backend**: Python with **Flask**
-* **Frontend**: HTML, CSS, and modern JavaScript (ES6 Modules)
-* **3D Graphics**: **Three.js**
-* **AI Integration**: **Google Gemini API**
-* **Deployment**: Can be deployed on platforms like Heroku or any cloud provider that supports Python web apps.
+- **Backend**: Python (Flask)  
+- **Frontend**: HTML, CSS, JavaScript (ES6 Modules)  
+- **3D Graphics**: Three.js  
+- **AI Integration**: Google Gemini API  
+- **Deployment**: Works on **Render, Heroku, or any cloud provider** supporting Python apps  
 
 ---
 
 ## ⚙️ Setup and Installation
 
-To get this project running on your local machine, follow these simple steps:
+Follow these steps to run the project locally:
 
 ### 1. Clone the Repository
-
 ```bash
-git clone [https://github.com/your-username/DSA-Odssey.git](https://github.com/your-username/DSA-Odssey.git)
+git clone https://github.com/your-username/DSA-Odssey.git
 cd DSA-Odssey
 ````
 
-### 2\. Create a Virtual Environment
-
-It's highly recommended to use a virtual environment to manage project dependencies.
+### 2. Create a Virtual Environment
 
 ```bash
 # For Windows
@@ -55,81 +50,79 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3\. Install Dependencies
-
-Install all the required Python packages using pip.
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4\. Set Up Environment Variables
+### 4. Set Up Environment Variables
 
-The application uses the Google Gemini API, which requires an API key.
+Create a `.env` file in the project root and add your Gemini API key:
 
-  * Create a new file named `.env` in the root directory of the project.
-  * Add your API key to this file as shown below:
-    ```
-    GEMINI_API_KEY="YOUR_API_KEY_GOES_HERE"
-    ```
+```bash
+GEMINI_API_KEY="YOUR_API_KEY_GOES_HERE"
+```
 
-*Replace `"YOUR_API_KEY_GOES_HERE"` with your actual API key from Google AI Studio.*
+> Replace with your actual API key from [Google AI Studio](https://ai.google.dev).
 
-### 5\. Run the Application
-
-Start the Flask development server.
+### 5. Run the Application
 
 ```bash
 flask run
 ```
 
-Your application should now be running\! Open your web browser and navigate to `http://127.0.0.1:5000` to see the DSA Odyssey in action.
+Now visit: 👉 [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
------
+---
 
 ## 📖 How to Use
 
-1.  **Explore the Galaxy**: Use your mouse to rotate, pan, and zoom the 3D scene.
-2.  **View Problem Details**: Click on any glowing star (planet) to view the details of the DSA problem solved on that day. This will automatically open the sidebar.
-3.  **Get AI Solutions**: In the details view, click the "Get AI Code Solution" button. A full-screen modal will appear.
-4.  **Enter Language**: Type your desired programming language (e.g., `Python`, `Java`, `C++`) into the input field.
-5.  **Generate**: Click "Generate Solution" to receive a complete code solution and a detailed explanation, neatly organized into two cards.
+* **Explore the Galaxy**: Rotate, pan, and zoom the 3D scene with your mouse or touch.
+* **View Problem Details**: Click any glowing star to open the sidebar with details.
+* **AI Code Solutions**:
 
------
+  1. Open a problem.
+  2. Enter your desired language (Python, Java, C++, etc.).
+  3. Click **Generate Solution**.
+  4. A modal will display the code + explanation.
+
+---
 
 ## 📁 Project Structure
 
 ```
 .
-├── app.py              # Main Flask application logic
-├── Procfile            # For deployment (e.g., Heroku)
-├── requirements.txt    # Python dependencies
-├── .env                # For API keys (not committed)
+├── app.py               # Main Flask app
+├── Procfile             # For deployment (Heroku, Render, etc.)
+├── requirements.txt     # Python dependencies
+├── .env                 # API keys (not committed)
 ├── static/
 │   ├── css/
-│   │   └── style.css   # Main stylesheet
+│   │   └── style.css    # Stylesheet
 │   ├── js/
-│   │   └── main.js     # Three.js and frontend logic
-│   └── journeyData.json # Data for all DSA problems
+│   │   └── main.js      # Three.js + UI logic
+│   └── journeyData.json # DSA problems data
 └── templates/
-    └── index.html      # Main HTML file
+    └── index.html       # Main HTML
 ```
 
------
+---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome\! Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/your-username/DSA-Odssey/issues).
+Contributions, issues, and feature requests are welcome!
+Check out the [issues page](https://github.com/your-username/DSA-Odssey/issues).
 
------
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for details.
 
------
+---
 
-Created with ❤️ by **Khurram Rashid**.
+Created with ❤️ by **Khurram Rashid**
 
-```
 ```
