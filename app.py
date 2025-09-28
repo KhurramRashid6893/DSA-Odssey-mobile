@@ -12,7 +12,7 @@ GEMINI_API_KEY = "AIzaSyBJdGsl4nyHyHMqk3SaXRTEAprQlyIFfT8"
 
 # Configure the Gemini API client
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 
 def parse_ai_response(text):
