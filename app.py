@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # --- Gemini AI Setup ---
 # Directly define the API key here (⚠️ Not recommended for production)
-GEMINI_API_KEY = "AIzaSyBZ_Mea6_FaJVcWTYhc4r1OAlGzjdQIkxw"
+GEMINI_API_KEY = "AIzaSyCRSTkuwGQ9bQBz1ed-MGFSR-O6mfO4YxQ"
 
 # Configure the Gemini API client
 genai.configure(api_key=GEMINI_API_KEY)
